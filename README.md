@@ -1,2 +1,153 @@
 # VA1---Verificação-de-Aprendizagem
 VA1 - Verificação de Aprendizagem
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Gabriel Oliveira Silva · Página Pessoal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #1B1F23;
+      --ink: #EDEAE3;
+      --muted: #9AA0A8;
+      --accent: #C9A227;
+      --sage: #6B8F71;
+      --rule: #33383E;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+    }
+
+    .hero,
+    main,
+    .footer {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .hero {
+      padding-top: 96px;
+      padding-bottom: 56px;
+    }
+
+    .hero__eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 0.95rem;
+    }
+
+    .hero__name {
+      margin: 0 0 20px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.2rem, 6vw, 3.4rem);
+      line-height: 1.1;
+    }
+
+    .hero__intro {
+      max-width: 52ch;
+      color: var(--ink);
+      font-size: 1.05rem;
+    }
+
+    .section {
+      border-top: 1px solid var(--rule);
+      padding: 40px 0;
+    }
+
+    .section__title {
+      margin: 0 0 14px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      font-size: 1.4rem;
+    }
+
+    .section__text {
+      max-width: 58ch;
+      color: var(--ink);
+    }
+
+    .skills {
+      list-style: none;
+      margin: 20px 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills__item {
+      border: 1px solid var(--sage);
+      color: var(--sage);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
+
+    .footer {
+      border-top: 1px solid var(--rule);
+      padding: 24px 0 64px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding-top: 64px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <p class="hero__eyebrow">Olá, eu sou</p>
+    <h1 class="hero__name">Gabriel</h1>
+    <p class="hero__intro">
+      Meu nome é Gabriel, estudo Sistemas de Informação na faculdade promove e trabalho com suporte de TI
+    </p>
+  </header>
+
+  <main>
+    <section class="section" id="interesses">
+      <h2 class="section__title">Interesses &amp; objetivos</h2>
+      <p class="section__text">
+        Pretendo me formar em TI nos próximos anos e seguir carreira focada em banco de dados, focando em projetos.
+      </p>
+    </section>
+
+    <section class="section" id="habilidades">
+      <h2 class="section__title">Habilidades &amp; tecnologias</h2>
+      <p class="section__text">Aquilo que já domino e o que estou aprendendo:</p>
+      <ul class="skills">
+        <li class="skills__item">HTML</li>
+        <li class="skills__item">CSS</li>
+        <li class="skills__item">Git &amp; GitHub</li>
+        <li class="skills__item"></li>
+        <li class="skills__item"></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Feito com HTML e CSS · <span id="ano"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
